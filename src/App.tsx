@@ -1,12 +1,7 @@
-import FileInput from './components/FileInput/FileInput'
-import styles from './App.module.css'
+import Landing from './pages/Landing/Landing'
 
 function App() {
-  return (
-    <div className={styles.main}>
-      <FileInput />
-    </div>
-  )
+  return <Landing />
 }
 
 export default App
