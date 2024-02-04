@@ -2,7 +2,7 @@ import { parseDate } from './parseDate'
 import { findLongestRunningOverlap } from './findLongestRunningOverlap'
 import { EmployeeProjects, PairResults } from '../types'
 
-export const findLongestPair = (results: any): Promise<PairResults> => {
+export const findLongestRunningPairProject = (results: any): Promise<PairResults> => {
   const employeeProjects: EmployeeProjects = {}
 
   return new Promise((resolve, reject) => {
