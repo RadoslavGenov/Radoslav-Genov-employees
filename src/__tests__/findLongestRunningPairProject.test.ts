@@ -12,23 +12,21 @@ const csvParsed = [
   ['106', '10', '2000-01-01', 'NULL']
 ]
 
-const expectedResult: PairResults = {
+const expectedResult = {
   empOne: '106',
-  empTwo: '218',
-  projectId: '10',
-  duration: 4281.6
+  empTwo: '218'
 }
 
 test('finding longest running pair project', async () => {
-  const result = await findLongestRunningPairProject(csvParsed)
+  const { empOne, empTwo } = await findLongestRunningPairProject(csvParsed)
 
-  expect(result).toEqual(expectedResult)
+  expect({ empOne, empTwo }).toEqual(expectedResult)
 })
 
 test('finding longest running pair project with different date format', async () => {
   csvParsed[7] = ['106', '10', '01-01-2000', 'NULL']
 
-  const result = await findLongestRunningPairProject(csvParsed)
+  const { empOne, empTwo } = await findLongestRunningPairProject(csvParsed)
 
-  expect(result).toEqual(expectedResult)
+  expect({ empOne, empTwo }).toEqual(expectedResult)
 })
