@@ -1,7 +1,7 @@
 import { ChangeEvent, useRef, useState } from 'react'
 import styles from './FileInput.module.css'
 import { findLongestRunningPairProject } from '../../utils/findLongestRunningPairProject'
-import { readCSV } from '../../utils/readCsv'
+import { readCsv } from '../../utils/readCsv'
 import { FileInputProps } from './FileInput.types'
 
 const FileInput: React.FC<FileInputProps> = ({ onComplete }) => {
@@ -23,7 +23,7 @@ const FileInput: React.FC<FileInputProps> = ({ onComplete }) => {
 
     setName(file.name)
 
-    const parsed = await readCSV(file)
+    const parsed = await readCsv(file)
 
     inputRef.current.value = ''
 
