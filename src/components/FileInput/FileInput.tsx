@@ -2,11 +2,7 @@ import { ChangeEvent, useRef, useState } from 'react'
 import styles from './FileInput.module.css'
 import { findLongestPair } from '../../utils/findLongestPair'
 import { readCSV } from '../../utils/readCsv'
-import { PairResults } from '../../types'
-
-type FileInputProps = Readonly<{
-  onComplete: (data: PairResults) => void
-}>
+import { FileInputProps } from './FileInput.types'
 
 const FileInput: React.FC<FileInputProps> = ({ onComplete }) => {
   const inputRef = useRef<HTMLInputElement | null>(null)
