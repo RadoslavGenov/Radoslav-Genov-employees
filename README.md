@@ -21,38 +21,48 @@ As for the UI components, they are pretty basic. I have went with the modular ap
 
 ```
 .
-├── components
-│   ├── FileInput
-│   │   ├── FileInput.module.css
-│   │   ├── FileInput.tsx
-│   │   └── FileInput.types.ts
-│   └── Table
-│       ├── Table.constants.ts
-│       ├── Table.module.css
-│       ├── Table.tsx
-│       └── Table.types.ts
-├── fonts
-│   └── Rubik.ttf
-├── mock
-│   └── employees.csv
-├── pages
-│   └── Landing
-│       ├── Landing.module.css
-│       └── Landing.tsx
-├── types
-│   └── index.ts
-├── utils
-│   ├── calculateOverlap.ts
-│   ├── findLongestPair.ts
-│   ├── findLongestRunningOverlap.ts
-│   ├── getDuration.ts
-│   ├── isLonger.ts
-│   ├── parseDate.ts
-│   └── readCsv.ts
-├── index.css
-├── index.tsx
-├── App.tsx
-├── reportWebVitals.ts
-├── setupTests.ts
-└── vite-env.d.ts
+├── README.md
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── manifest.json
+│   └── robots.txt
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── FileInput
+│   │   │   ├── FileInput.module.css
+│   │   │   ├── FileInput.tsx
+│   │   │   └── FileInput.types.ts
+│   │   └── Table
+│   │       ├── Table.constants.ts
+│   │       ├── Table.module.css
+│   │       ├── Table.tsx
+│   │       └── Table.types.ts
+│   ├── fonts
+│   │   └── Rubik.ttf
+│   ├── index.css
+│   ├── index.tsx
+│   ├── mock
+│   │   └── employees.csv
+│   ├── pages
+│   │   └── Landing
+│   │       ├── Landing.module.css
+│   │       └── Landing.tsx
+│   ├── reportWebVitals.ts
+│   ├── setupTests.ts
+│   ├── types
+│   │   └── index.ts
+│   ├── utils
+│   │   ├── calculateOverlap.ts
+│   │   ├── findLongestPair.ts
+│   │   ├── findLongestRunningOverlap.ts
+│   │   ├── getDuration.ts
+│   │   ├── isLonger.ts
+│   │   ├── parseDate.ts
+│   │   └── readCsv.ts
+│   └── vite-env.d.ts
+├── tsconfig.json
+└── vite.config.ts
 ```
