@@ -8,7 +8,7 @@ Running the app:
 
 I decided to use React with Typescript for the task, since I am most familiar with React as view library, but I am open to learning anything new :) I initially created the app with CRA, and then ejected it deciding to integrate build tool Vite JS. 
 
-The jist functions and utils to the solution of the task are located in the utils/ folder. I will go through them and explain what they each do. 
+The jist functions and utils to the solution of the task are located in the utils/ folder. I will go through them and explain what they each do. I have also added a mock/employees.csv file as to what the app would expect for input (the same as in project requirements).
 
 - `readCsv` - Parses a given csv file which is selected from the browser file picker, I decided to use papaparse a (third party lib) for the task.
 - `parseDate` - Parses the dates from a the already parsed csv file. takes into consideration a value of NULL to express the current date.
@@ -30,6 +30,8 @@ The jist functions and utils to the solution of the task are located in the util
 │       └── Table.tsx
 ├── fonts
 │   └── Rubik.ttf
+├── mock
+│   └── employees.csv
 ├── pages
 │   └── Landing
 │       ├── Landing.module.css

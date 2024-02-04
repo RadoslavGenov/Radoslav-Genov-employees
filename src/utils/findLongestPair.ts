@@ -17,7 +17,7 @@ export const findLongestPair = (results: any): Promise<PairResults> => {
         }
 
         employeeProjects[EmpID].push({
-          projectID: ProjectID,
+          projectId: ProjectID,
           dateFrom,
           dateTo
         })
@@ -38,10 +38,10 @@ export const findLongestPair = (results: any): Promise<PairResults> => {
           const empTwo = empKeys[j]
 
           const empOneProjectIds = employeeProjects[empOne].map(
-            (x) => x.projectID
+            (x) => x.projectId
           )
           const empTwoProjectIds = employeeProjects[empTwo].map(
-            (x) => x.projectID
+            (x) => x.projectId
           )
 
           const commonProjectsIds = empOneProjectIds.filter((projectOneId) =>
@@ -51,9 +51,16 @@ export const findLongestPair = (results: any): Promise<PairResults> => {
           )
 
           for (const id of commonProjectsIds) {
+            const empOneProjects = employeeProjects[empOne].filter(
+              (x) => x.projectId === id
+            )
+            const empTwoProjects = employeeProjects[empTwo].filter(
+              (x) => x.projectId === id
+            )
+
             const result = findLongestRunningOverlap(
-              employeeProjects[empOne],
-              employeeProjects[empTwo],
+              empOneProjects,
+              empTwoProjects,
               id
             )
 

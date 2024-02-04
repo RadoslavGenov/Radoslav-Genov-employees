@@ -1,5 +1,5 @@
 export type Project = Readonly<{
-  projectID: string
+  projectId: string
   dateFrom: Date
   dateTo: Date
 }>

@@ -4,18 +4,15 @@ import { getDuration } from './getDuration'
 import { isLonger } from './isLonger'
 
 export const findLongestRunningOverlap = (
-  empProject1: Project[],
-  empProject2: Project[],
+  empProjectOne: Project[],
+  empProjectTwo: Project[],
   projectId: string
 ) => {
-  const projectEmp1 = empProject1.filter((x) => x.projectID === projectId)
-  const projectEmp2 = empProject2.filter((x) => x.projectID === projectId)
-
   let longestOverlap = { dateFrom: new Date(), dateTo: new Date() }
 
-  for (const dateRange1 of projectEmp1) {
-    for (const dateRange2 of projectEmp2) {
-      const overlap = calculateOverlap(dateRange1, dateRange2)
+  for (const dateRangeOne of empProjectOne) {
+    for (const dateRangeTwo of empProjectTwo) {
+      const overlap = calculateOverlap(dateRangeOne, dateRangeTwo)
 
       if (overlap !== null && isLonger(overlap, longestOverlap as any)) {
         longestOverlap = overlap

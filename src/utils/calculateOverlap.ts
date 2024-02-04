@@ -1,11 +1,11 @@
 import { Project } from '../types'
 
-export function calculateOverlap(range1: Project, range2: Project): any | null {
+export function calculateOverlap(rangeOne: Project, rangeTwo: Project): any | null {
   const start = new Date(
-    Math.max(range1.dateFrom.getTime(), range2.dateFrom.getTime())
+    Math.max(rangeOne.dateFrom.getTime(), rangeTwo.dateFrom.getTime())
   )
   const end = new Date(
-    Math.min(range1.dateTo.getTime(), range2.dateTo.getTime())
+    Math.min(rangeOne.dateTo.getTime(), rangeTwo.dateTo.getTime())
   )
 
   if (start <= end) {
