@@ -1,9 +1,7 @@
-import { Project } from './findLongestPair'
-
-export const getDuration = (project: Project) => {
-  const differenceInMs = project.dateFrom.getTime() - project.dateTo.getTime()
+export const getDuration = (dateFrom: Date, dateTo: Date) => {
+  const differenceInMs = dateTo.getTime() - dateFrom.getTime()
 
   const differenceInDays = differenceInMs / (1000 * 60 * 60 * 24)
 
-  return differenceInDays
+  return Math.round(differenceInDays * 10) / 10
 }
