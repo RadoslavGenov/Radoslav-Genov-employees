@@ -1,4 +1,3 @@
-import { PairResults } from '../types'
 import { findLongestRunningPairProject } from '../utils/findLongestRunningPairProject'
 
 const csvParsed = [
