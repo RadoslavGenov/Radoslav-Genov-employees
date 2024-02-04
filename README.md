@@ -6,7 +6,11 @@ Running the app:
 
 ### `npm start`
 
-I decided to use React with Typescript for the task, since I am most familiar with React as view library, but I am open to learning anything new :) I initially created the app with CRA, and then ejected it deciding to integrate build tool Vite JS.
+Running tests:
+
+### `npm run test`
+
+I decided to use React with Typescript for the task, since I am most familiar with React as view library, but I am open to learning anything new :) I initially created the app with CRA, and then ejected it deciding to integrate build tool Vite JS. As a testing tool I use jest.
 
 The jist functions and utils to the solution of the task are located in the utils/ folder. I will go through them and explain what they each do. I have also added a mock/employees.csv file as to what the app would expect for input (the same as in project requirements).
 
@@ -22,7 +26,9 @@ As for the UI components, they are pretty basic. I have went with the modular ap
 ```
 .
 ├── README.md
+├── babel.config.js
 ├── index.html
+├── jest.config.js
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -30,6 +36,8 @@ As for the UI components, they are pretty basic. I have went with the modular ap
 │   └── robots.txt
 ├── src
 │   ├── App.tsx
+│   ├── __tests__
+│   │   └── findLongestRunningPairProject.test.ts
 │   ├── components
 │   │   ├── FileInput
 │   │   │   ├── FileInput.module.css
@@ -56,8 +64,8 @@ As for the UI components, they are pretty basic. I have went with the modular ap
 │   │   └── index.ts
 │   ├── utils
 │   │   ├── calculateOverlap.ts
-│   │   ├── findLongestRunningPairProject.ts
 │   │   ├── findLongestRunningOverlap.ts
+│   │   ├── findLongestRunningPairProject.ts
 │   │   ├── getDuration.ts
 │   │   ├── isLonger.ts
 │   │   ├── parseDate.ts
